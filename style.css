@@ -1,0 +1,474 @@
+html {
+  height: 100%;
+}
+p {
+  color: grey;
+}
+h1 {
+  text-transform: uppercase;
+  color: green;
+  font-weight: normal;
+  text-align: center;
+  margin: 20px 10px 10px 10px;
+  padding: 10;
+}
+#heading {
+  text-transform: uppercase;
+  color: green;
+  font-weight: normal;
+  margin-bottom: 40px;
+}
+#msform {
+  text-align: center;
+  position: relative;
+  margin-top: 20px;
+}
+#msform fieldset {
+  background: white;
+  /* background: #d2d2d4; */
+  border: 0 none;
+  border-radius: 0.5rem;
+  box-sizing: border-box;
+  width: 100%;
+  margin: 0;
+  padding-bottom: 20px;
+  position: relative;
+  box-shadow: 0 0 10px rgba(7, 7, 7, 0.4);
+}
+.form-card {
+  text-align: left;
+}
+#msform fieldset:not(:first-of-type) {
+  display: none;
+}
+
+#msform input {
+  padding: 8px 15px 8px 15px;
+  border: 1px solid black;
+  border-radius: 0px;
+  margin-bottom: 15px;
+  margin-top: 2px;
+  /* width: 100%;   */
+  box-sizing: border-box;
+  font-family: montserrat;
+  color: #2c3e50;
+  background-color: #f7fcff;
+  font-size: 16px;
+  letter-spacing: 1px;
+}
+#msform textarea {
+  padding: 8px 15px 8px 15px;
+  border: 1px solid #ccc;
+  border-radius: 0px;
+  margin-bottom: 15px;
+  margin-top: 2px;
+  width: 100%;
+  box-sizing: border-box;
+  font-family: montserrat;
+  color: #2c3e50;
+  background-color: #eceff1;
+  font-size: 16px;
+  letter-spacing: 1px;
+}
+#msform input:focus {
+  -moz-box-shadow: none !important;
+  -webkit-box-shadow: none !important;
+  box-shadow: none !important;
+  border: 1px solid green;
+  outline-width: 0;
+}
+#msform textarea:focus {
+  -moz-box-shadow: none !important;
+  -webkit-box-shadow: none !important;
+  box-shadow: none !important;
+  border: 1px solid green;
+  outline-width: 0;
+}
+#msform .action-button {
+  width: 100px;
+  background: green;
+  font-weight: bold;
+  color: white;
+  border: 0 none;
+  border-radius: 0px;
+  cursor: pointer;
+  padding: 10px 5px;
+  margin: 10px 0px 10px 5px;
+  float: right;
+}
+#msform .action-button:hover {
+  background-color: #311b92;
+}
+#msform .action-button:focus {
+  background-color: #311b92;
+}
+#msform .action-button-pre {
+  width: 100px;
+  background: #616161;
+  font-weight: bold;
+  color: white;
+  border: 0 none;
+  border-radius: 0px;
+  cursor: pointer;
+  padding: 10px 5px;
+  margin: 10px 5px 10px 0px;
+  float: right;
+}
+#msform .action-button-pre:hover {
+  background-color: #000000;
+}
+#msform .action-button-pre:focus {
+  background-color: #000000;
+}
+.card {
+  z-index: 0;
+  border: none;
+  position: relative;
+}
+.fs-title {
+  font-size: 25px;
+  color: green;
+  margin-bottom: 15px;
+  font-weight: normal;
+  text-align: left;
+}
+.purple-text {
+  color: green;
+  font-weight: normal;
+}
+.steps {
+  font-size: 15px;
+  color: gray;
+  margin-bottom: 1px;
+  font-weight: normal;
+  text-align: right;
+}
+.fieldlabels {
+  color: gray;
+  text-align: left;
+}
+#progressbar {
+  margin-bottom: 20px;
+  overflow: hidden;
+  color: lightgrey;
+}
+#progressbar .active {
+  color: green;
+}
+#progressbar li {
+  list-style-type: none;
+  font-size: 15px;
+  width: 25%;
+  float: left;
+  position: relative;
+  font-weight: 400;
+}
+#progressbar #account:before {
+  font-family: FontAwesome;
+  content: "\f13e";
+}
+#progressbar #trust:before {
+  font-family: FontAwesome;
+  content: "\f007";
+}
+#progressbar #Statutory-Committees:before {
+  font-family: FontAwesome;
+  content: "\f030";
+}
+
+#progressbar #member-interacted:before {
+  font-family: FontAwesome;
+  content: "\f00c";
+}
+#progressbar li:before {
+  width: 50px;
+  height: 50px;
+  line-height: 45px;
+  display: block;
+  font-size: 20px;
+  color: #ffffff;
+  background: lightgray;
+  border-radius: 50%;
+  margin: 0 auto 10px auto;
+  padding: 2px;
+}
+
+#progressbar li:after {
+  content: "";
+  width: 100%;
+  height: 2px;
+  background: lightgray;
+  position: absolute;
+  left: 0;
+  top: 25px;
+  z-index: -1;
+}
+#progressbar li.active:before {
+  background: green;
+}
+#progressbar li.active:after {
+  background: green;
+}
+.progress {
+  height: 20px;
+}
+
+.pbar {
+  background-color: green;
+}
+.fit-image {
+  width: 100%;
+  object-fit: cover;
+}
+
+.col-7 {
+  margin-left: 20px;
+}
+
+#msforms .heading2 input {
+  background-color: #000000;
+}
+
+/* section wise css code */
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.4;
+
+  box-sizing: border-box;
+}
+
+.container {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #fff;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+}
+
+.container3 {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+  /* background-color: #FFDAB9; */
+  background-color: #eddfdf56;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+}
+
+.heading {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.heading h1 {
+  font-size: 2em;
+  margin: 20px 0px 10px 40px;
+  text-decoration: underline;
+  text-align: left;
+}
+
+.heading h2 {
+  font-size: 1.5em;
+  margin: 10px 0;
+}
+
+.heading2 {
+  text-align: left;
+  margin-bottom: 40px;
+  margin-left: 20px;
+}
+
+.heading2 p {
+  font-weight: bold;
+  display: inline-block;
+  margin-bottom: 10px;
+  position: relative;
+  color: black;
+}
+
+.heading2 input[type="text"] {
+  border: 6px solid black;
+  margin: 10px 20px;
+}
+
+/* .heading2 p::after {
+  content: "";
+  background: #514d4c;
+  width: 512px;
+  height: 3px;
+  border-radius: 5px;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+} */
+
+.heading2 input {
+  width: 100%;
+  padding: 8px;
+  box-sizing: border-box;
+  margin-bottom: 20px;
+}
+
+.heading2 input[type="text"] {
+  width: 17%;
+}
+
+form {
+  margin-top: 20px;
+}
+
+.container h3 {
+  font-size: 1.2em;
+  border-bottom: 2px solid #333;
+  padding-bottom: 5px;
+  margin-bottom: 10px;
+}
+
+.clg-input {
+  margin: 10px 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+.clg-input label {
+  display: block;
+  font-weight: bold;
+  margin-top: 18px;
+  margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="number"],
+input[type="email"],
+input[type="date"],
+textarea {
+  width: 63%;
+  border-radius: 7px;
+  padding: 8px;
+  box-sizing: border-box;
+  margin: 10px 0;
+  border: 1px solid black;
+}
+
+select {
+  border-radius: 5px;
+  border: 1px solid black;
+  padding: 7px;
+  box-sizing: border-box;
+  margin: 10px;
+  width: 120px;
+}
+
+.toi select {
+  margin-right: 24rem;
+  margin-top: 10px;
+}
+
+.loccc label {
+  display: inline-block;
+}
+
+.loccc select {
+  margin-top: 10px;
+  margin-left: 13rem;
+}
+
+.soua select {
+  margin-top: 10px;
+  margin-right: 21rem;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 50px 0px 50px 15%;
+  height: 400px;
+}
+
+.table2 {
+  margin-left: 8%;
+}
+
+.table th,
+.table td {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: left;
+}
+
+.table th {
+  background-color: #333;
+  color: #fff;
+}
+
+/* .table td{
+  background-color: rgba(50, 115, 220, 0.3);
+} */
+
+button {
+  display: inline-block;
+  width: 120px;
+  height: 40px;
+  /* left: 50%; */
+  margin: 25px 0px;
+  cursor: pointer;
+  border: 1px solid #03045e;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.5s ease-in;
+  z-index: 1;
+}
+
+button::before,
+button::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 0;
+  height: 100%;
+  transform: skew(15deg);
+  transition: all 0.5s;
+  overflow: hidden;
+  z-index: -1;
+}
+
+button::before {
+  left: -10px;
+  background: #240046;
+}
+
+button::after {
+  right: -10px;
+  background: #5a189a;
+}
+
+button:hover::before,
+button:hover::after {
+  width: 58%;
+}
+
+button:hover span {
+  color: #e0aaff;
+  transition: 0.3s;
+}
+
+button span {
+  color: #03045e;
+  font-size: 18px;
+  transition: all 0.3s ease-in;
+}
+
+@media only screen and (max-width: 767px) {
+  .container {
+    padding: 15px;
+  }
+
+  .heading2 input {
+    width: calc(100% - 16px);
+  }
+}

@@ -1,0 +1,538 @@
+<! DOCTYPE html>
+    <html>
+
+    <head>
+        <title> University</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href='https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css'>
+        <script src='https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js'>
+        </script>
+        <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'>
+        </script>
+        <link rel="stylesheet" href="style.css">
+    </head>
+
+    <body>
+
+        <div class="container-fluid">
+            <h1> Annexure - III</h1>
+            <div class="row justify-content-center">
+                <div class="col-11 col-sm-9 col-md-7 col-lg-6 col-xl-5 text-center p-0 mt-3 mb-2">
+                    <div class="card px-0 pt-4 pb-0 mt-3 mb-3"> 
+                        <form  action="connect.php" method="post" id="msform">
+                        <h2 id="heading"> REPORT OF THE ACADEMIC AUDIT COMMITTEE </h2>
+                        <ul id="progressbar">
+                            <li class="active" id="account"><strong> Clg Details </strong></li>
+                            <li id="trust"><strong> Trust Details </strong></li>
+                            <li id="Statutory-Committees"><strong> Availability of Statutory Committees </strong></li>
+                            <li id="member-interacted"><strong> Member Who Interacted With the Committee</strong></li>
+                            
+
+                        </ul>
+                        <div class="progress">
+                            <div class="pbar pbar-striped pbar-animated" role="progressbar" aria-valuemin="0"
+                                aria-valuemax="100"> </div>
+                        </div> <br>
+                        <fieldset>
+                            <div class="form-card">
+                                <div class="row">
+                                    <div class="col-7">
+                                        <h2 class="fs-title">I. College Details: </h2>
+
+                                    </div>
+                                    <div class="col-5">
+                                        <h2 class="steps"> Step 1 - 4 </h2>
+                                    </div>
+                                </div>
+
+                                <div class="heading2">
+                                    <p>
+                                        <b>TYPE OF COLLEGE / RECOGNISED INSTITUTION UNDER THE FACULTY OF :</b>
+                                    </p>
+                                    <input type="text" name="faculty" id="Fc" placeholder="Type here...." />
+                                </div>
+
+                                <div class="container container3">
+                                    <h3 class="top">I. Clg Details</h3>
+                                    <div class="part1">
+                                        <div class="clg-input">
+                                            <label id="name" for="name"><b>1. Name of the College: </b></label>
+                                            <input type="text" class="clg" name="clgname"
+                                                placeholder="Enter Your College Name.." required />
+                                        </div>
+
+                                        <div class="clg-input">
+                                            <label for="address" id="address"><b>2. Address:</b></label>
+                                            <input type="text" class="clgaddress" id="clgaddress" name="clgaddress"
+                                                placeholder="Enter Address..." required />
+                                        </div>
+                                    </div>
+
+                                    <div class="part2">
+                                        <div class="clg-input">
+                                            <label for="establishment" id="est"><b>3. Year of Establishment:</b></label>
+                                            <input type="date" class="clgest" id="establishment" name="clgestablishment"
+                                                required />
+                                        </div>
+
+                                        <div class="clg-input">
+                                            <label for="contact" id="cnt"><b>4. Contact:</b></label>
+                                            <input type="text" class="clgcontact" id="contact" name="clgcontact"
+                                                placeholder="eg: 0123456789" required />
+                                        </div>
+                                    </div>
+
+                                    <div class="part3">
+                                        <div class="clg-input">
+                                            <label for="email" id="eml"><b>5. Email ID:</b></label>
+                                            <input type="email" class="clgemail" id="email" name="clgemail"
+                                                placeholder="abc12@gmail.com" required />
+                                        </div>
+
+                                        <div class="clg-input">
+                                            <label for="website" id="wb"><b>6. Web Site:</b></label>
+                                            <input type="text" class="clgwebsite" id="website" name="clgwebsite"
+                                                placeholder="www.abc.com" required />
+                                        </div>
+                                    </div>
+
+                                    <!-- Select Stmts -->
+
+                                    <div class="part4">
+                                        <div class="clg-input toi">
+                                            <label for="type" id="toi"><b>7. Type of Institute / College:</b></label>
+                                            <select id="type" name="type" required>
+                                                <option value="">Select</option>
+                                                <option value="women">Women's / Co-Education</option>
+                                                <option value="men">Men's</option>
+                                            </select>
+                                        </div>
+
+                                        <div class="clg-input loccc">
+                                            <div class="loc">
+                                                <label for="location" id="loc"><b>8. Location:</b>
+                                                    <select id="location" name="location" required>
+                                                        <option value="">Select</option>
+                                                        <option value="urban">Urban</option>
+                                                        <option value="rural">Rural</option>
+                                                        <option value="hill">Hill Area</option>
+                                                        <option value="semiurban">Semi-Urban</option>
+                                                    </select></label>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="part5">
+                                        <div class="clg-input soua">
+                                            <label for="status" id="soua"><b>9. Status of University
+                                                    affiliation:</b></label>
+                                            <select id="status" name="status" required>
+                                                <option value="">Select</option>
+                                                <option value="permanent">Permanent</option>
+                                                <option value="one">One Year</option>
+                                                <option value="two">Two Year</option>
+                                                <option value="three">Three Year</option>
+                                            </select><br />
+                                        </div>
+
+                                        <div class="clg-input">
+                                            <div class="ugclabel">
+                                                <label for="Approval" id="u2a">
+                                                    <b>10. UGC 2f Approval:</b></label>
+                                            </div>
+                                            <input type="text" class="UGC" id="UGC2f" name="Approval1"
+                                                placeholder="Enter Details.." required />
+                                        </div>
+                                    </div>
+
+                                    <!-- UGC and NAAC -->
+                                    <div class="part6">
+                                        <div class="clg-input">
+                                            <div class="ugclabel">
+                                                <label for="Approval" id="12a"> <b>11. 12b Approval:</b></label>
+                                            </div>
+                                            <input type="text" class="UGC" id="UGC12b" name="Approval2"
+                                                placeholder="Enter Details.." required />
+                                        </div>
+
+                                        <div class="clg-input">
+                                            <div class="ugclabel">
+                                                <label for="NAAC" id="nayg"><b>12. NAAC Accrediation Year &
+                                                        Grade:</b></label>
+                                            </div>
+                                            <input type="text" class="UGC" id="UGCNAAC" name="Approval3"
+                                                placeholder="Enter Details.." required />
+                                        </div>
+                                    </div>
+
+                                    <div class="part7">
+                                        <div class="clg-input">
+                                            <div class="ugclabel">
+                                                <label for="NBA" id="nbayg">
+                                                    <b>13. NBA Accrediation Year & Grade:</b></label>
+                                            </div>
+                                            <input type="text" class="UGC" id="UGCNBA" name="Approval4"
+                                                placeholder="Enter Details.." required />
+                                        </div>
+
+                                        <div class="clg-input">
+                                            <div class="ugclabel">
+                                                <label for="NIRF" id="nyr">
+                                                    <b>14. NIRF Year & Ranking:</b></label>
+                                            </div>
+                                            <input type="text" class="UGC" id="UGCNIRF" name="Approval5"
+                                                placeholder="Enter Details.." required />
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- <hr> -->
+                                <!-- </div> <input type="button" name="next" class="next action-button" value="Next" />   -->
+                            </div> <input type="button" name="next" class="next action-button" value="Next" />
+                        </fieldset>
+
+                        
+                        <fieldset>
+                            <div class="form-card">
+                                <div class="row">
+                                    <div class="col-7">
+                                        <h2 class="fs-title"> II. Trust Details: </h2>
+                                    </div>
+                                    <div class="col-5">
+                                        <h2 class="steps"> Step 2 - 4 </h2>
+                                    </div>
+                                </div> <!-- Trust -->
+                                <div class="container container3">
+                                    <h3 class="top">II. Trust Details</h3>
+                                    <div class="part8">
+                                        <div class="clg-input">
+                                            <label id="name" for="name"><b>1. Name of Trust/Society: </b></label>
+                                            <input type="text" class="clg" id="tname" name="tname"
+                                                placeholder="Enter Your Trust/Society Name.." required />
+                                        </div>
+
+                                        <div class="clg-input">
+                                            <label for="address"><b>2. Address:</b></label>
+                                            <input type="text" class="taddress" id="taddress" name="taddress"
+                                                placeholder="Enter Address.." required />
+                                        </div>
+                                    </div>
+
+                                    <div class="part9">
+                                        <div class="clg-input">
+                                            <label for="establishment"><b>3. Year of Establishment:</b></label>
+                                            <input type="date" id="testablishment" name="testablishment" required />
+                                        </div>
+
+                                        <div class="clg-input">
+                                            <label for="contact" id="tcnt"><b>4. Contact:</b></label>
+                                            <input type="text" class="clgcontact" id="tcontact" name="tcontact"
+                                                placeholder="eg: 0123456789" required />
+                                        </div>
+                                    </div>
+
+                                    <div class="part10">
+                                        <div class="clg-input">
+                                            <label for="email" id="teml"><b>5. Email ID:</b></label>
+                                            <input type="email" class="clgemail" id="temail" name="temail"
+                                                placeholder="abc12@gmail.com" required />
+                                        </div>
+
+                                        <div class="clg-input">
+                                            <label for="website" id="twb"><b>6. Web Site:</b></label>
+                                            <input type="text" class="clgwebsite" id="twebsite" name="twebsite"
+                                                placeholder="www.abc.com" required />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <input type="button" name="next" class="next action-button" value="Next" /> <input
+                                type="button" name="pre" class="pre action-button-pre" value="Pre" />
+                        </fieldset>
+
+
+
+
+                        <fieldset>
+                            <div class="form-card">
+                                <div class="row">
+                                    <div class="col-7">
+                                        <h2 class="fs-title"> III. Availability of Statutory Committees: </h2>
+                                    </div>
+                                    <div class="col-5">
+                                        <h2 class="steps"> Step 3 - 4 </h2>
+                                    </div>
+                                </div> <!--  Table  1 -->
+                                <div class="container container3">
+                                    <h3 class="top"><b>III. Availability of Statutory Committees: </b></h3>
+
+                                    <table style="width: 65%" border="1" class="table table-responsive">
+                                        <thead>
+                                            <tr>
+                                                <th style="width: 10%">Sr. No.</th>
+                                                <th style="width: 35%">Name Of Committee</th>
+                                                <th style="width: 20%">Availability</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>1.</td>
+
+                                                <td>College Development Committee</td>
+
+                                                <td>
+                                                    <div class="radio" id="rbcdc">
+                                                        <label><input type="radio" name="cdc" value="y" />Yes</label>
+                                                        <label><input type="radio" name="cdc" value="n" />No</label>
+                                                    </div>
+                                                </td>
+                                            </tr>
+
+                                            <tr>
+                                                <td>2.</td>
+
+                                                <td>Internal Complaints Committee</td>
+
+                                                <td>
+                                                    <div class="radio" id="rbicc">
+                                                        <label><input type="radio" name="icc" value="y" />Yes</label>
+                                                        <label><input type="radio" name="icc" value="n" />No</label>
+                                                    </div>
+                                                </td>
+                                            </tr>
+
+                                            <tr>
+                                                <td>3.</td>
+
+                                                <td>Internal Quality Assurance Cell</td>
+
+                                                <td>
+                                                    <div class="radio" id="rbiqac">
+                                                        <label><input type="radio" name="iqac" value="y" />Yes</label>
+                                                        <label><input type="radio" name="iqac" value="n" />No</label>
+                                                    </div>
+                                                </td>
+                                            </tr>
+
+                                            <tr>
+                                                <td>4.</td>
+
+                                                <td>Students Council</td>
+
+                                                <td>
+                                                    <div class="radio" id="rbsc">
+                                                        <label><input type="radio" name="sc" value="y" />Yes</label>
+                                                        <label><input type="radio" name="sc" value="n" />No</label>
+                                                    </div>
+                                                </td>
+                                            </tr>
+
+                                            <tr>
+                                                <td>5.</td>
+
+                                                <td>Anti-Ragging Committee</td>
+
+                                                <td>
+                                                    <div class="radio" id="rbarc">
+                                                        <label><input type="radio" name="arc" value="y" />Yes</label>
+                                                        <label><input type="radio" name="arc" value="n" />No</label>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div> <input type="button" name="next" class="next action-button" value="Next" />  
+                            <input type="button" name="pre" class="pre action-button-pre" value="Pre" />
+                        </fieldset>
+
+
+
+                        <fieldset>
+                            <div class="form-card">
+                                <div class="row">
+                                    <div class="col-7">
+                                        <h2 class="fs-title"> IV. Member Who Interacted With the Committee: </h2>
+                                    </div>
+                                    <div class="col-5">
+                                        <h2 class="steps"> Step 4 - 4 </h2>
+                                    </div>
+                                    <!-- Table 2 -->
+                                    <div class="container container3">
+                                        <h3 class="top">
+                                            <b>IV. Member Who Interacted With the Committee: </b>
+                                        </h3>
+                                        <table style="width: 85%" border="1" class="table table-responsive table2">
+                                            <thead>
+                                                <tr>
+                                                    <th style="width: 10%">Sr. No.</th>
+                                                    <th style="width: 30%">Member</th>
+                                                    <th style="width: 25%">Name</th>
+                                                    <th style="width: 25%">Remarks</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody id="tb2">
+                                                <tr>
+                                                    <td>1.</td>
+
+                                                    <td>Principal</td>
+
+                                                    <td>
+                                                        <div class="mname" id="pname">
+                                                            <input type="text" name="pname" />
+                                                        </div>
+                                                    </td>
+
+                                                    <td>
+                                                        <div class="remark" id="prremark">
+                                                            <input type="text" name="premark" />
+                                                        </div>
+                                                    </td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td>2.</td>
+
+                                                    <td>Management Representative</td>
+
+                                                    <td>
+                                                        <div class="mname" id="mrname">
+                                                            <input type="text" name="mrname" />
+                                                        </div>
+                                                    </td>
+
+                                                    <td>
+                                                        <div class="remark" id="mrremark">
+                                                            <input type="text" name="mrremark" />
+                                                        </div>
+                                                    </td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td>3.</td>
+
+                                                    <td>IQAC Member</td>
+
+                                                    <td>
+                                                        <div class="mname" id="iqacname">
+                                                            <input type="text" name="iqacname" />
+                                                        </div>
+                                                    </td>
+
+                                                    <td>
+                                                        <div class="remark" id="iqacremark">
+                                                            <input type="text" name="iqacremark" />
+                                                        </div>
+                                                    </td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td>4.</td>
+
+                                                    <td>Student Council</td>
+
+                                                    <td>
+                                                        <div class="mname" id="scname">
+                                                            <input type="text" name="scname" />
+                                                        </div>
+                                                    </td>
+
+                                                    <td>
+                                                        <div class="remark" id="scremark">
+                                                            <input type="text" name="scremark" />
+                                                        </div>
+                                                    </td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td>5.</td>
+
+                                                    <td>Teaching Staff</td>
+
+                                                    <td>
+                                                        <div class="mname" id="tsname">
+                                                            <input type="text" name="tsname" />
+                                                        </div>
+                                                    </td>
+
+                                                    <td>
+                                                        <div class="remark" id="tsremark">
+                                                            <input type="text" name="tsremark" />
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                            <
+                                <!-- </div> <input type="button" name="next" class="next action-button" value="Submit"  /> -->
+                                <a href="mailto:mufeez428@gmail.com"> <button class="next action-button">SUBMIT</button></a>
+                                <input type="button" name="pre" class="pre action-button-pre" value="Prev" />
+                        </fieldset>
+
+
+                        <!-- Submitting -->
+    
+                        </form>
+                </div>
+                    </div>
+                </div>
+            </div>
+        
+
+            <script>
+                $(document).ready(function () {
+                    var current_fs, next_fs, pre_fs;
+                    var opacity;
+                     var current = 1;
+                     var steps = $("fieldset").length;
+                     setProgressBar(current);
+                     $(".next").click(function () {
+                    current_fs = $(this).parent();
+                   next_fs = $(this).parent().next();
+                       $("#progressbar li").eq($("fieldset").index(next_fs)).addClass("active");
+                      next_fs.show();
+                  current_fs.animate({ opacity: 0 }, {
+                    step: function (now) {
+                        opacity = 1 - now;
+                            current_fs.css({
+                           'display': 'none',
+                           'position': 'relative'
+                       });
+              next_fs.css({ 'opacity': opacity });
+             },
+          duration: 500
+          });
+        setProgressBar(++current);
+      });
+             $(".pre").click(function () {
+            current_fs = $(this).parent();
+           pre_fs = $(this).parent().prev();
+         $("#progressbar li").eq($("fieldset").index(current_fs)).removeClass("active");
+            pre_fs.show();
+         current_fs.animate({ opacity: 0 }, {
+           step: function (now) {
+              opacity = 1 - now;
+              current_fs.css({
+                  'display': 'none',
+                  'position': 'relative'
+              });
+              pre_fs.css({ 'opacity': opacity });
+          },
+          duration: 500
+      });
+      setProgressBar(--current);
+      });
+          function setProgressBar(curStep) {
+             var percent = parseFloat(100 / steps) * curStep;
+            percentpercent = percent.toFixed();
+             $(".pbar").css("width", percent + "%")
+     }
+  });  
+            </script>
+
+    </body>
+
+    </html>
