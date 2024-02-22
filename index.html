@@ -58,13 +58,13 @@
                                     <div class="part1">
                                         <div class="clg-input">
                                             <label id="name" for="name"><b>1. Name of the College: </b></label>
-                                            <input type="text" class="clg" name="clgname"
+                                            <input type="text" class="clg" name="clg_name"
                                                 placeholder="Enter Your College Name.." required />
                                         </div>
 
                                         <div class="clg-input">
                                             <label for="address" id="address"><b>2. Address:</b></label>
-                                            <input type="text" class="clgaddress" id="clgaddress" name="clgaddress"
+                                            <input type="text" class="clgaddress" id="clgaddress" name="clg_address"
                                                 placeholder="Enter Address..." required />
                                         </div>
                                     </div>
@@ -72,13 +72,14 @@
                                     <div class="part2">
                                         <div class="clg-input">
                                             <label for="establishment" id="est"><b>3. Year of Establishment:</b></label>
-                                            <input type="date" class="clgest" id="establishment" name="clgestablishment"
+                                            <input type="number" class="clgest" id="establishment" name="clg_establishment" min="1900" max="2024" placeholder="Enter Establishment Year..."
                                                 required />
+
                                         </div>
 
                                         <div class="clg-input">
                                             <label for="contact" id="cnt"><b>4. Contact:</b></label>
-                                            <input type="text" class="clgcontact" id="contact" name="clgcontact"
+                                            <input type="text" class="clgcontact" id="contact" name="clg_contact"
                                                 placeholder="eg: 0123456789" required />
                                         </div>
                                     </div>
@@ -86,13 +87,13 @@
                                     <div class="part3">
                                         <div class="clg-input">
                                             <label for="email" id="eml"><b>5. Email ID:</b></label>
-                                            <input type="email" class="clgemail" id="email" name="clgemail"
+                                            <input type="email" class="clgemail" id="email" name="clg_email"
                                                 placeholder="abc12@gmail.com" required />
                                         </div>
 
                                         <div class="clg-input">
                                             <label for="website" id="wb"><b>6. Web Site:</b></label>
-                                            <input type="text" class="clgwebsite" id="website" name="clgwebsite"
+                                            <input type="text" class="clgwebsite" id="website" name="clg_website"
                                                 placeholder="www.abc.com" required />
                                         </div>
                                     </div>
@@ -102,17 +103,18 @@
                                     <div class="part4">
                                         <div class="clg-input toi">
                                             <label for="type" id="toi"><b>7. Type of Institute / College:</b></label>
-                                            <select id="type" name="type" required>
+                                            <select id="type" name="typee" required>
                                                 <option value="">Select</option>
-                                                <option value="women">Women's / Co-Education</option>
+                                                <option value="women">Women's</option>
                                                 <option value="men">Men's</option>
+                                                <option value="co-ed">Co-Education</option>
                                             </select>
                                         </div>
 
                                         <div class="clg-input loccc">
                                             <div class="loc">
                                                 <label for="location" id="loc"><b>8. Location:</b>
-                                                    <select id="location" name="location" required>
+                                                    <select id="location" name="locationn" required>
                                                         <option value="">Select</option>
                                                         <option value="urban">Urban</option>
                                                         <option value="rural">Rural</option>
@@ -127,63 +129,279 @@
                                         <div class="clg-input soua">
                                             <label for="status" id="soua"><b>9. Status of University
                                                     affiliation:</b></label>
-                                            <select id="status" name="status" required>
+                                            <select id="status" name="statuss" required>
                                                 <option value="">Select</option>
                                                 <option value="permanent">Permanent</option>
-                                                <option value="one">One Year</option>
-                                                <option value="two">Two Year</option>
-                                                <option value="three">Three Year</option>
+                                                <option value="temporary">Temporary</option>
                                             </select><br />
                                         </div>
 
                                         <div class="clg-input">
+
                                             <div class="ugclabel">
+                                                <label for="Approval" id="u2a">
+                                                    <b>10. UGC 2f Approval:</b>
+                                                </label>
+                                            
+                                                <div class="aaa">
+                                                    <input type="radio" name="approvalOption" id="yes" onclick="toggleInputBox(true)" />
+                                                    <label for="yes">Yes</label>
+                                            
+                                                    <input type="radio" name="approvalOption" id="no" onclick="toggleInputBox(false)" />
+                                                    <label for="no">No</label>
+                                                </div>
+                                            </div>
+                                            
+                                            <div id="inputBoxContainer">
+                                                <input type="text" class="UGC" id="UGC2f" name="Approval1" placeholder="Enter Details.." required />
+                                            </div>
+
+
+
+                                            <!-- <div class="ugclabel">
                                                 <label for="Approval" id="u2a">
                                                     <b>10. UGC 2f Approval:</b></label>
                                             </div>
                                             <input type="text" class="UGC" id="UGC2f" name="Approval1"
-                                                placeholder="Enter Details.." required />
-                                        </div>
+                                                placeholder="Enter Details.." required /> -->
+                                            </div>
                                     </div>
+                                  
+                                
 
                                     <!-- UGC and NAAC -->
                                     <div class="part6">
                                         <div class="clg-input">
-                                            <div class="ugclabel">
+
+
+                                            <div class="ugclabel2">
+                                                <label for="12a">
+                                                    <b>11. 12b Approval:</b>
+                                                </label>
+                                            
+                                                <div class="bbb">
+                                                    <input type="radio" name="approvalOption12b" id="yes12b" onclick="toggleInputBox12b(true)" />
+                                                    <label for="yes12b">Yes</label>
+                                            
+                                                    <input type="radio" name="approvalOption12b" id="no12b" onclick="toggleInputBox12b(false)" />
+                                                    <label for="no12b">No</label>
+                                                </div>
+                                            
+                                                <div id="inputBoxContainer2">
+                                                    <input type="text" class="UGC" id="UGC12b" name="Approval2" placeholder="Enter Details.." required />
+                                                </div>
+                                            </div>
+
+
+                                            <!-- <div class="ugclabel">
                                                 <label for="Approval" id="12a"> <b>11. 12b Approval:</b></label>
                                             </div>
                                             <input type="text" class="UGC" id="UGC12b" name="Approval2"
-                                                placeholder="Enter Details.." required />
-                                        </div>
-
-                                        <div class="clg-input">
-                                            <div class="ugclabel">
-                                                <label for="NAAC" id="nayg"><b>12. NAAC Accrediation Year &
-                                                        Grade:</b></label>
-                                            </div>
-                                            <input type="text" class="UGC" id="UGCNAAC" name="Approval3"
-                                                placeholder="Enter Details.." required />
+                                                placeholder="Enter Details.." required /> -->
                                         </div>
                                     </div>
 
+                                        <div class="clg-input">
+                                            
+                             <div class="ugclabel3">
+                             <label for="NAAC" id="nayg">
+                                  <b>12. NAAC Accreditation Year:</b>
+                             </label>
+
+                            <div  class="ccc">
+                                <input type="radio" name="approvalOptionNAAC" id="yesNAAC" onclick="toggleInputBoxNAAC(true)" />
+                                 <label for="yesNAAC">Yes</label>
+
+                                 <input type="radio" name="approvalOptionNAAC" id="noNAAC" onclick="toggleInputBoxNAAC(false)" />
+                                       <label for="noNAAC">No</label>
+                             </div>
+
+                                 <div id="inputBoxContainerNAAC">
+                                <input type="text" class="UGC" id="UGCNAAC" name="Approval3" placeholder="Enter Details.." required />
+                              </div>
+                            </div>
+
+<!-- 
+                                            <div class="ugclabel">
+                                                <label for="NAAC" id="nayg"><b>12. NAAC Accrediation Year:</b></label>
+                                            </div>
+                                            <input type="text" class="UGC" id="UGCNAAC" name="Approval3"
+                                                placeholder="Enter Details.." required /> -->
+                                        </div>
+
+<!-- ------------------------------------------------------------------------------------------------------------------------------------------- -->
+                                        <div class="clg-input">
+
+                                            
+<div class="ugclabel13">
+    <label for="NAAC" id="nayg13">
+        <b>13. NAAC Accrediation Grade:</b>
+    </label>
+
+    <div class="ddd">
+        <input type="radio" name="approvalOptionNAAC13" id="yesNAAC13" onclick="toggleInputBoxNAAC13(true)" />
+        <label for="yesNAAC13">Yes</label>
+
+        <input type="radio" name="approvalOptionNAAC13" id="noNAAC13" onclick="toggleInputBoxNAAC13(false)" />
+        <label for="noNAAC13">No</label>
+    </div>
+
+    <div id="inputBoxContainerNAAC13">
+        <input type="text" class="UGC" id="UGCNAAC13" name="Approval3" placeholder="Enter Details.." required />
+    </div>
+</div>
+
+
+
+
+
+
+
+                                            <!-- <div class="ugclabel">
+                                                <label for="NAAC" id="nayg"><b>13. NAAC Accrediation Grade:</b></label>
+                                            </div>
+                                            <input type="text" class="UGC" id="UGCNAAC" name="Approval3"
+                                                placeholder="Enter Details.." required />
+                                        </div> -->
+
+                                    </div>
+
+
+                                    <!-- --------------------------------------------------------------------------------------------- -->
+
                                     <div class="part7">
                                         <div class="clg-input">
-                                            <div class="ugclabel">
+
+
+                                            
+<div class="ugclabel14">
+    <label for="NBA" id="nbayg14">
+        <b>14. NBA Accrediation Year:</b>
+    </label>
+
+    <div class="eee">
+        <input type="radio" name="approvalOptionNBA14" id="yesNBA14" onclick="toggleInputBoxNBA14(true)" />
+        <label for="yesNBA14">Yes</label>
+
+        <input type="radio" name="approvalOptionNBA14" id="noNBA14" onclick="toggleInputBoxNBA14(false)" />
+        <label for="noNBA14">No</label>
+    </div>
+
+    <div id="inputBoxContainerNBA14">
+        <input type="text" class="UGC" id="UGCNBA14" name="Approval4" placeholder="Enter Details.." required />
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+                                            <!-- <div class="ugclabel">
                                                 <label for="NBA" id="nbayg">
-                                                    <b>13. NBA Accrediation Year & Grade:</b></label>
+                                                    <b>14. NBA Accrediation Year:</b></label>
                                             </div>
                                             <input type="text" class="UGC" id="UGCNBA" name="Approval4"
-                                                placeholder="Enter Details.." required />
+                                                placeholder="Enter Details.." required /> -->
+                                        </div>
+<!-- ------------------------------------------------------------------------------------------------------------------- -->
+
+                                        <div class="clg-input">
+
+
+                                            <div class="ugclabel15">
+                                                <label for="NBA" id="nbayg15">
+                                                    <b>15. NBA Accrediation Grade:</b>
+                                                </label>
+                                            
+                                                <div  class="fff">
+                                                    <input type="radio" name="approvalOptionNBA15" id="yesNBA15" onclick="toggleInputBoxNBA15(true)" />
+                                                    <label for="yesNBA15">Yes</label>
+                                            
+                                                    <input type="radio" name="approvalOptionNBA15" id="noNBA15" onclick="toggleInputBoxNBA15(false)" />
+                                                    <label for="noNBA15">No</label>
+                                                </div>
+                                            
+                                                <div id="inputBoxContainerNBA15">
+                                                    <input type="text" class="UGC" id="UGCNBA15" name="Approval4" placeholder="Enter Details.." required />
+                                                </div>
+                                            </div>
+
+
+
+
+                                            <!-- <div class="ugclabel">
+                                                <label for="NBA" id="nbayg">
+                                                    <b>15. NBA Accrediation Grade:</b></label>
+                                            </div>
+                                            <input type="text" class="UGC" id="UGCNBA" name="Approval4"
+                                                placeholder="Enter Details.." required /> -->
                                         </div>
 
                                         <div class="clg-input">
-                                            <div class="ugclabel">
+
+                                            <div class="ugclabel16">
+                                                <label for="NIRF" id="nyr16">
+                                                    <b>16. NIRF Year:</b>
+                                                </label>
+                                            
+                                                <div class="ggg">
+                                                    <input type="radio" name="approvalOptionNIRF16" id="yesNIRF16" onclick="toggleInputBoxNIRF16(true)" />
+                                                    <label for="yesNIRF16">Yes</label>
+                                            
+                                                    <input type="radio" name="approvalOptionNIRF16" id="noNIRF16" onclick="toggleInputBoxNIRF16(false)" />
+                                                    <label for="noNIRF16">No</label>
+                                                </div>
+                                            
+                                                <div id="inputBoxContainerNIRF16">
+                                                    <input type="text" class="UGC" id="UGCNIRF16" name="Approval5" placeholder="Enter Details.." required />
+                                                </div>
+                                            </div>
+
+
+
+                                            <!-- <div class="ugclabel">
                                                 <label for="NIRF" id="nyr">
-                                                    <b>14. NIRF Year & Ranking:</b></label>
+                                                    <b>16. NIRF Year:</b></label>
                                             </div>
                                             <input type="text" class="UGC" id="UGCNIRF" name="Approval5"
-                                                placeholder="Enter Details.." required />
+                                                placeholder="Enter Details.." required /> -->
                                         </div>
+
+                                        <div class="clg-input">
+
+                                            
+<div class="ugclabel17">
+    <label for="NIRF" id="nyr17">
+        <b>17. NIRF Ranking:</b>
+    </label>
+
+    <div class="hhh">
+        <input type="radio" name="approvalOptionNIRF17" id="yesNIRF17" onclick="toggleInputBoxNIRF17(true)" />
+        <label for="yesNIRF17">Yes</label>
+
+        <input type="radio" name="approvalOptionNIRF17" id="noNIRF17" onclick="toggleInputBoxNIRF17(false)" />
+        <label for="noNIRF17">No</label>
+    </div>
+
+    <div id="inputBoxContainerNIRF17">
+        <input type="text" class="UGC" id="UGCNIRF17" name="Approval5" placeholder="Enter Details.." required />
+    </div>
+</div>
+
+
+
+                                                <!-- <div class="ugclabel">
+                                                    <label for="NIRF" id="nyr">
+                                                        <b>17. NIRF Ranking:</b></label>
+                                                </div>
+                                                <input type="text" class="UGC" id="UGCNIRF" name="Approval5"
+                                                    placeholder="Enter Details.." required /> -->
+                                        </div>
+
                                     </div>
                                 </div>
                                 <!-- <hr> -->
@@ -207,26 +425,31 @@
                                     <div class="part8">
                                         <div class="clg-input">
                                             <label id="name" for="name"><b>1. Name of Trust/Society: </b></label>
-                                            <input type="text" class="clg" id="tname" name="tname"
+                                            <input type="text" class="clg" id="tname" name="t_name"
                                                 placeholder="Enter Your Trust/Society Name.." required />
                                         </div>
 
                                         <div class="clg-input">
                                             <label for="address"><b>2. Address:</b></label>
-                                            <input type="text" class="taddress" id="taddress" name="taddress"
+                                            <input type="text" class="taddress" id="taddress" name="t_address"
                                                 placeholder="Enter Address.." required />
                                         </div>
                                     </div>
 
                                     <div class="part9">
                                         <div class="clg-input">
-                                            <label for="establishment"><b>3. Year of Establishment:</b></label>
-                                            <input type="date" id="testablishment" name="testablishment" required />
+                                            <label for="establishment">3. Year  Of Establishment:</label>
+                                            <input type="number" id="establishment" name="establishment" min="1900" max="2024" placeholder="Enter Establishment Year" required>
+                                            
+                                         
+                                         
+                                            <!-- <label for="establishment"><b>3. Year of Establishment:</b></label>
+                                            <input type="date" id="testablishment" name="t_establishment" required /> -->
                                         </div>
 
                                         <div class="clg-input">
                                             <label for="contact" id="tcnt"><b>4. Contact:</b></label>
-                                            <input type="text" class="clgcontact" id="tcontact" name="tcontact"
+                                            <input type="text" class="clgcontact" id="tcontact" name="t_contact"
                                                 placeholder="eg: 0123456789" required />
                                         </div>
                                     </div>
@@ -234,13 +457,13 @@
                                     <div class="part10">
                                         <div class="clg-input">
                                             <label for="email" id="teml"><b>5. Email ID:</b></label>
-                                            <input type="email" class="clgemail" id="temail" name="temail"
+                                            <input type="email" class="clgemail" id="temail" name="t_email"
                                                 placeholder="abc12@gmail.com" required />
                                         </div>
 
                                         <div class="clg-input">
                                             <label for="website" id="twb"><b>6. Web Site:</b></label>
-                                            <input type="text" class="clgwebsite" id="twebsite" name="twebsite"
+                                            <input type="text" class="clgwebsite" id="twebsite" name="t_website"
                                                 placeholder="www.abc.com" required />
                                         </div>
                                     </div>
@@ -352,7 +575,7 @@
                             <div class="form-card">
                                 <div class="row">
                                     <div class="col-7">
-                                        <h2 class="fs-title"> IV. Member Who Interacted With the Committee: </h2>
+                                        <h2 class="fs-title"> IV. Member Who Interacted With <br> the Committee: </h2>
                                     </div>
                                     <div class="col-5">
                                         <h2 class="steps"> Step 4 - 4 </h2>
@@ -360,15 +583,15 @@
                                     <!-- Table 2 -->
                                     <div class="container container3">
                                         <h3 class="top">
-                                            <b>IV. Member Who Interacted With the Committee: </b>
+                                            <b>IV. Member Who Interacted With <br> the Committee: </b>
                                         </h3>
                                         <table style="width: 85%" border="1" class="table table-responsive table2">
                                             <thead>
                                                 <tr>
-                                                    <th style="width: 10%">Sr. No.</th>
+                                                    <th style="width: 8%">Sr. No.</th>
                                                     <th style="width: 30%">Member</th>
-                                                    <th style="width: 25%">Name</th>
-                                                    <th style="width: 25%">Remarks</th>
+                                                    <th style="width: 28%">Name</th>
+                                                    <th style="width: 24%">Remarks</th>
                                                 </tr>
                                             </thead>
                                             <tbody id="tb2">
@@ -379,13 +602,13 @@
 
                                                     <td>
                                                         <div class="mname" id="pname">
-                                                            <input type="text" name="pname" />
+                                                            <input type="text" name="p_name" />
                                                         </div>
                                                     </td>
 
                                                     <td>
                                                         <div class="remark" id="prremark">
-                                                            <input type="text" name="premark" />
+                                                            <input type="text" name="p_remark" />
                                                         </div>
                                                     </td>
                                                 </tr>
@@ -397,13 +620,13 @@
 
                                                     <td>
                                                         <div class="mname" id="mrname">
-                                                            <input type="text" name="mrname" />
+                                                            <input type="text" name="mr_name" />
                                                         </div>
                                                     </td>
 
                                                     <td>
                                                         <div class="remark" id="mrremark">
-                                                            <input type="text" name="mrremark" />
+                                                            <input type="text" name="mr_remark" />
                                                         </div>
                                                     </td>
                                                 </tr>
@@ -415,13 +638,13 @@
 
                                                     <td>
                                                         <div class="mname" id="iqacname">
-                                                            <input type="text" name="iqacname" />
+                                                            <input type="text" name="iqac_name" />
                                                         </div>
                                                     </td>
 
                                                     <td>
                                                         <div class="remark" id="iqacremark">
-                                                            <input type="text" name="iqacremark" />
+                                                            <input type="text" name="iqac_remark" />
                                                         </div>
                                                     </td>
                                                 </tr>
@@ -433,13 +656,13 @@
 
                                                     <td>
                                                         <div class="mname" id="scname">
-                                                            <input type="text" name="scname" />
+                                                            <input type="text" name="sc_name" />
                                                         </div>
                                                     </td>
 
                                                     <td>
                                                         <div class="remark" id="scremark">
-                                                            <input type="text" name="scremark" />
+                                                            <input type="text" name="sc_remark" />
                                                         </div>
                                                     </td>
                                                 </tr>
@@ -451,13 +674,13 @@
 
                                                     <td>
                                                         <div class="mname" id="tsname">
-                                                            <input type="text" name="tsname" />
+                                                            <input type="text" name="ts_name" />
                                                         </div>
                                                     </td>
 
                                                     <td>
                                                         <div class="remark" id="tsremark">
-                                                            <input type="text" name="tsremark" />
+                                                            <input type="text" name="ts_remark" />
                                                         </div>
                                                     </td>
                                                 </tr>
@@ -475,10 +698,12 @@
 
                         <!-- Submitting -->
     
+                        <!-- <button id="printButton" class="action-button">Print</button> -->
                         </form>
                 </div>
                     </div>
                 </div>
+              
             </div>
         
 
@@ -531,6 +756,134 @@
              $(".pbar").css("width", percent + "%")
      }
   });  
+
+//  clg details
+
+function toggleInputBox(showInputBox) {
+        var inputBoxContainer = document.getElementById("inputBoxContainer");
+        var inputBox = document.getElementById("UGC2f");
+
+        if (showInputBox) {
+            inputBoxContainer.style.display = "block";
+            inputBox.style.display = "block";
+        } else {
+            inputBoxContainer.style.display = "none";
+            inputBox.style.display = "none";
+        }
+    }
+
+
+
+    // 2
+    function toggleInputBox12b(showInputBox) {
+        var inputBoxContainer = document.getElementById("inputBoxContainer2");
+        var inputBox = document.getElementById("UGC12b");
+
+        if (showInputBox) {
+            inputBoxContainer.style.display = "block";
+            inputBox.style.display = "block";
+        } else {
+            inputBoxContainer.style.display = "none";
+            inputBox.style.display = "none";
+        }
+    }
+
+
+    // 3 
+    function toggleInputBoxNAAC(showInputBox) {
+        var inputBoxContainer = document.getElementById("inputBoxContainerNAAC");
+        var inputBox = document.getElementById("UGCNAAC");
+
+        if (showInputBox) {
+            inputBoxContainer.style.display = "block";
+            inputBox.style.display = "block";
+        } else {
+            inputBoxContainer.style.display = "none";
+            inputBox.style.display = "none";
+        }
+    }
+
+
+    // 4
+
+    function toggleInputBoxNAAC13(showInputBox) {
+        var inputBoxContainer = document.getElementById("inputBoxContainerNAAC13");
+        var inputBox = document.getElementById("UGCNAAC13");
+
+        if (showInputBox) {
+            inputBoxContainer.style.display = "block";
+            inputBox.style.display = "block";
+        } else {
+            inputBoxContainer.style.display = "none";
+            inputBox.style.display = "none";
+        }
+    }
+
+
+    // 5
+
+
+    function toggleInputBoxNBA14(showInputBox) {
+        var inputBoxContainer = document.getElementById("inputBoxContainerNBA14");
+        var inputBox = document.getElementById("UGCNBA14");
+
+        if (showInputBox) {
+            inputBoxContainer.style.display = "block";
+            inputBox.style.display = "block";
+        } else {
+            inputBoxContainer.style.display = "none";
+            inputBox.style.display = "none";
+        }
+    }
+
+
+
+    // 6 
+
+    function toggleInputBoxNBA15(showInputBox) {
+        var inputBoxContainer = document.getElementById("inputBoxContainerNBA15");
+        var inputBox = document.getElementById("UGCNBA15");
+
+        if (showInputBox) {
+            inputBoxContainer.style.display = "block";
+            inputBox.style.display = "block";
+        } else {
+            inputBoxContainer.style.display = "none";
+            inputBox.style.display = "none";
+        }
+    }
+
+// 7
+
+function toggleInputBoxNIRF16(showInputBox) {
+        var inputBoxContainer = document.getElementById("inputBoxContainerNIRF16");
+        var inputBox = document.getElementById("UGCNIRF16");
+
+        if (showInputBox) {
+            inputBoxContainer.style.display = "block";
+            inputBox.style.display = "block";
+        } else {
+            inputBoxContainer.style.display = "none";
+            inputBox.style.display = "none";
+        }
+    }
+
+
+    // 8
+
+    function toggleInputBoxNIRF17(showInputBox) {
+        var inputBoxContainer = document.getElementById("inputBoxContainerNIRF17");
+        var inputBox = document.getElementById("UGCNIRF17");
+
+        if (showInputBox) {
+            inputBoxContainer.style.display = "block";
+            inputBox.style.display = "block";
+        } else {
+            inputBoxContainer.style.display = "none";
+            inputBox.style.display = "none";
+        }
+    }
+
             </script>
 
     </body>
